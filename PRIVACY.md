@@ -23,4 +23,4 @@ If this policy changes, the new version will be published here with a new date.
 
 ## Contact
 
-Questions about this policy: khtou192@gmail.com
+Questions about this policy: open an issue at https://github.com/KhaledToumeh194/dhakkirni/issues
