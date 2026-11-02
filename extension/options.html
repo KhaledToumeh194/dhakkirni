@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dhakkirni</title>
+  <link rel="icon" href="icons/icon-32.png">
+  <link rel="stylesheet" href="options.css">
+  <script type="module" src="options.js"></script>
+</head>
+<body>
+  <main hidden>
+    <header class="top">
+      <h1><img src="icons/logo.svg" alt="" width="28" height="28"><span lang="ar" dir="rtl">ذكّرني</span><span class="sep" aria-hidden="true">·</span><span lang="en" dir="ltr">Dhakkirni</span></h1>
+      <label class="switch">
+        <input type="checkbox" name="enabled" role="switch">
+        <span data-i18n="enabledLabel"></span>
+      </label>
+    </header>
+
+    <section class="today" aria-labelledby="today-heading">
+      <div class="today-head">
+        <h2 id="today-heading" data-i18n="todayHeading"></h2>
+        <p id="today-date" class="quiet-text"></p>
+      </div>
+      <ol id="today-times" class="times"></ol>
+      <p id="today-source" class="quiet-text"></p>
+    </section>
+
+    <section aria-labelledby="location-heading">
+      <h2 id="location-heading" data-i18n="locationHeading"></h2>
+      <div class="panel">
+        <div class="row">
+          <div class="row-text">
+            <p class="help" data-i18n="locationHelp"></p>
+          </div>
+          <button type="button" id="locate" data-i18n="useMyLocation"></button>
+        </div>
+        <form class="row" id="location-form" novalidate>
+          <div class="pair">
+            <label><span data-i18n="latitude"></span>
+              <input type="number" id="latitude" step="any" min="-90" max="90" inputmode="decimal" dir="ltr" required>
+            </label>
+            <label><span data-i18n="longitude"></span>
+              <input type="number" id="longitude" step="any" min="-180" max="180" inputmode="decimal" dir="ltr" required>
+            </label>
+          </div>
+          <button type="submit" data-i18n="saveLocation"></button>
+        </form>
+        <p id="location-error" class="row error" role="alert" hidden></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="calc-heading">
+      <h2 id="calc-heading" data-i18n="calcHeading"></h2>
+      <div class="panel">
+        <label class="row">
+          <span class="row-text" data-i18n="method"></span>
+          <select name="method" id="method"></select>
+        </label>
+        <div id="custom-block" hidden>
+          <div class="row">
+            <div class="trio">
+              <label><span data-i18n="fajrAngle"></span>
+                <input type="number" name="customAngles.fajr" min="0" max="30" step="0.1" dir="ltr">
+              </label>
+              <label><span data-i18n="ishaAngle"></span>
+                <input type="number" name="customAngles.isha" min="0" max="30" step="0.1" dir="ltr">
+              </label>
+              <label><span data-i18n="ishaInterval"></span>
+                <input type="number" name="customAngles.ishaInterval" min="0" max="180" step="1" dir="ltr">
+              </label>
+            </div>
+          </div>
+          <p class="row help" data-i18n="customHelp"></p>
+        </div>
+        <label class="row">
+          <span class="row-text" data-i18n="madhab"></span>
+          <select name="madhab">
+            <option value="shafi" data-i18n="madhabShafi"></option>
+            <option value="hanafi" data-i18n="madhabHanafi"></option>
+          </select>
+        </label>
+        <div class="row">
+          <label class="row-text" for="high-latitude">
+            <span data-i18n="highLatitude"></span>
+            <span class="help" data-i18n="highLatitudeHelp"></span>
+          </label>
+          <select name="highLatitudeRule" id="high-latitude">
+            <option value="auto" data-i18n="highLatitudeAuto"></option>
+            <option value="middleofthenight" data-i18n="highLatitudeMiddle"></option>
+            <option value="seventhofthenight" data-i18n="highLatitudeSeventh"></option>
+            <option value="twilightangle" data-i18n="highLatitudeTwilight"></option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="prayers-heading">
+      <h2 id="prayers-heading" data-i18n="prayersHeading"></h2>
+      <div class="panel">
+        <table class="prayers">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="colPrayer"></th>
+              <th scope="col" data-i18n="colNotify"></th>
+              <th scope="col" data-i18n="colOffset"></th>
+            </tr>
+          </thead>
+          <tbody id="prayer-rows"></tbody>
+        </table>
+        <p class="row help" data-i18n="offsetHelp"></p>
+        <div class="row">
+          <label class="row-text" for="pre-minutes">
+            <span data-i18n="preMinutes"></span>
+            <span class="help" data-i18n="preMinutesHelp"></span>
+          </label>
+          <span class="unit-input">
+            <input type="number" name="preMinutes" id="pre-minutes" min="0" max="60" step="1" dir="ltr">
+            <span data-i18n="minutesUnit"></span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="dhikr-heading">
+      <h2 id="dhikr-heading" data-i18n="dhikrHeading"></h2>
+      <div class="panel">
+        <div class="row">
+          <label class="row-text" for="interval">
+            <span data-i18n="interval"></span>
+            <span class="help" data-i18n="intervalHelp"></span>
+          </label>
+          <span class="unit-input">
+            <select id="interval">
+              <option value="15">15</option>
+              <option value="30">30</option>
+              <option value="45">45</option>
+              <option value="60">60</option>
+              <option value="custom" data-i18n="intervalCustom"></option>
+            </select>
+            <input type="number" id="interval-custom" min="5" max="720" step="1" dir="ltr" hidden>
+            <span data-i18n="minutesUnit"></span>
+          </span>
+        </div>
+        <fieldset class="row">
+          <legend class="row-text" data-i18n="categories"></legend>
+          <div class="choices">
+            <label><input type="checkbox" name="categories.istighfar"><span data-i18n="includeIstighfar"></span></label>
+            <label><input type="checkbox" name="categories.tasbih"><span data-i18n="includeTasbih"></span></label>
+            <label><input type="checkbox" name="categories.salawat"><span data-i18n="includeSalawat"></span></label>
+          </div>
+        </fieldset>
+        <div class="row">
+          <label class="row-text check">
+            <input type="checkbox" name="quiet.enabled">
+            <span>
+              <span data-i18n="quietHours"></span>
+              <span class="help" data-i18n="quietHelp"></span>
+            </span>
+          </label>
+          <span class="pair narrow">
+            <label><span data-i18n="quietFrom"></span><input type="time" name="quiet.start" dir="ltr"></label>
+            <label><span data-i18n="quietTo"></span><input type="time" name="quiet.end" dir="ltr"></label>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="language-heading">
+      <h2 id="language-heading" data-i18n="languageHeading"></h2>
+      <div class="panel">
+        <div class="row">
+          <label class="row-text" for="language">
+            <span class="help" data-i18n="languageHelp"></span>
+          </label>
+          <select name="language" id="language">
+            <option value="both" data-i18n="languageBoth"></option>
+            <option value="ar" lang="ar">العربية</option>
+            <option value="en" lang="en">English</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bottom">
+      <button type="button" id="test" class="primary" data-i18n="testButton"></button>
+      <p class="help" data-i18n="testHelp"></p>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </footer>
+  </main>
+</body>
+</html>

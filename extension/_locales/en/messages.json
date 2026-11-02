@@ -1,0 +1,291 @@
+{
+  "extName": {
+    "message": "Dhakkirni – Dhikr & Prayer Reminder"
+  },
+  "extShortName": {
+    "message": "Dhakkirni"
+  },
+  "extDescription": {
+    "message": "Silent reminders for istighfar, dhikr and salawat while you work, and a notification at each prayer time."
+  },
+  "actionTitle": {
+    "message": "Dhakkirni settings"
+  },
+  "prayerFajr": {
+    "message": "Fajr"
+  },
+  "prayerSunrise": {
+    "message": "Sunrise"
+  },
+  "prayerDhuhr": {
+    "message": "Dhuhr"
+  },
+  "prayerAsr": {
+    "message": "Asr"
+  },
+  "prayerMaghrib": {
+    "message": "Maghrib"
+  },
+  "prayerIsha": {
+    "message": "Isha"
+  },
+  "prayerNow": {
+    "message": "It's time for $prayer$ prayer",
+    "placeholders": {
+      "prayer": {
+        "content": "$1"
+      }
+    }
+  },
+  "prayerSoon": {
+    "message": "$prayer$ in $minutes$",
+    "placeholders": {
+      "prayer": {
+        "content": "$1"
+      },
+      "minutes": {
+        "content": "$2"
+      }
+    }
+  },
+  "minutesOne": {
+    "message": "1 minute"
+  },
+  "minutesTwo": {
+    "message": "2 minutes"
+  },
+  "minutesFew": {
+    "message": "$count$ minutes",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "minutesMany": {
+    "message": "$count$ minutes",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "categoryIstighfar": {
+    "message": "Istighfar"
+  },
+  "categoryTasbih": {
+    "message": "Dhikr"
+  },
+  "categorySalawat": {
+    "message": "Salawat on the Prophet ﷺ"
+  },
+  "optionsTitle": {
+    "message": "Dhakkirni settings"
+  },
+  "enabledLabel": {
+    "message": "Reminders"
+  },
+  "todayHeading": {
+    "message": "Today"
+  },
+  "nextLabel": {
+    "message": "Next"
+  },
+  "sourceCalc": {
+    "message": "Calculated: $method$",
+    "placeholders": {
+      "method": {
+        "content": "$1"
+      }
+    }
+  },
+  "noLocation": {
+    "message": "Set your location below to see today's times."
+  },
+  "locationHeading": {
+    "message": "Location"
+  },
+  "useMyLocation": {
+    "message": "Use my location"
+  },
+  "latitude": {
+    "message": "Latitude"
+  },
+  "longitude": {
+    "message": "Longitude"
+  },
+  "saveLocation": {
+    "message": "Save"
+  },
+  "locationHelp": {
+    "message": "Used only to calculate prayer times. It stays on this device."
+  },
+  "locationDenied": {
+    "message": "Location access was denied. Enter the coordinates by hand."
+  },
+  "locationInvalid": {
+    "message": "Latitude must be between -90 and 90, longitude between -180 and 180."
+  },
+  "calcHeading": {
+    "message": "Calculation"
+  },
+  "method": {
+    "message": "Method"
+  },
+  "methodMuslimWorldLeague": {
+    "message": "Muslim World League"
+  },
+  "methodUmmAlQura": {
+    "message": "Umm al-Qura, Makkah"
+  },
+  "methodEgyptian": {
+    "message": "Egyptian General Authority of Survey"
+  },
+  "methodKarachi": {
+    "message": "University of Islamic Sciences, Karachi"
+  },
+  "methodNorthAmerica": {
+    "message": "ISNA (North America)"
+  },
+  "methodMoonsightingCommittee": {
+    "message": "Moonsighting Committee"
+  },
+  "methodDubai": {
+    "message": "Dubai"
+  },
+  "methodQatar": {
+    "message": "Qatar"
+  },
+  "methodKuwait": {
+    "message": "Kuwait"
+  },
+  "methodSingapore": {
+    "message": "Singapore"
+  },
+  "methodTurkey": {
+    "message": "Diyanet, Turkey"
+  },
+  "methodTehran": {
+    "message": "Institute of Geophysics, Tehran"
+  },
+  "methodCustom": {
+    "message": "Custom angles"
+  },
+  "fajrAngle": {
+    "message": "Fajr angle"
+  },
+  "ishaAngle": {
+    "message": "Isha angle"
+  },
+  "ishaInterval": {
+    "message": "Isha after Maghrib (min)"
+  },
+  "customHelp": {
+    "message": "Use the angles published by your country's religious authority. Set the Isha interval to 0 to use the angle."
+  },
+  "madhab": {
+    "message": "Asr"
+  },
+  "madhabShafi": {
+    "message": "Standard (Shafi'i, Maliki, Hanbali)"
+  },
+  "madhabHanafi": {
+    "message": "Hanafi"
+  },
+  "highLatitude": {
+    "message": "High latitudes"
+  },
+  "highLatitudeAuto": {
+    "message": "Automatic"
+  },
+  "highLatitudeMiddle": {
+    "message": "Middle of the night"
+  },
+  "highLatitudeSeventh": {
+    "message": "One seventh of the night"
+  },
+  "highLatitudeTwilight": {
+    "message": "Twilight angle"
+  },
+  "highLatitudeHelp": {
+    "message": "Matters above about 48° latitude, such as the UK, Scandinavia or Canada, where twilight can last all night in summer."
+  },
+  "prayersHeading": {
+    "message": "Prayer notifications"
+  },
+  "colPrayer": {
+    "message": "Prayer"
+  },
+  "colNotify": {
+    "message": "Notify"
+  },
+  "colOffset": {
+    "message": "Adjust (min)"
+  },
+  "offsetHelp": {
+    "message": "Adjust moves each calculated time earlier or later by that many minutes. Use it to match your mosque's timetable."
+  },
+  "preMinutes": {
+    "message": "Remind me before each prayer"
+  },
+  "preMinutesHelp": {
+    "message": "Minutes before the prayer. 0 turns it off."
+  },
+  "dhikrHeading": {
+    "message": "Dhikr reminders"
+  },
+  "interval": {
+    "message": "Remind me every"
+  },
+  "intervalCustom": {
+    "message": "Custom"
+  },
+  "minutesUnit": {
+    "message": "min"
+  },
+  "intervalHelp": {
+    "message": "At least 5 minutes."
+  },
+  "categories": {
+    "message": "Include"
+  },
+  "includeIstighfar": {
+    "message": "Istighfar"
+  },
+  "includeTasbih": {
+    "message": "Tasbih, tahmid, takbir"
+  },
+  "includeSalawat": {
+    "message": "Salawat on the Prophet ﷺ"
+  },
+  "quietHours": {
+    "message": "Quiet hours"
+  },
+  "quietFrom": {
+    "message": "From"
+  },
+  "quietTo": {
+    "message": "To"
+  },
+  "quietHelp": {
+    "message": "Pauses dhikr reminders only. Prayer notifications still show."
+  },
+  "languageHeading": {
+    "message": "Language"
+  },
+  "languageBoth": {
+    "message": "Arabic and English"
+  },
+  "languageHelp": {
+    "message": "Used for notifications and this page."
+  },
+  "testButton": {
+    "message": "Send test notification"
+  },
+  "testHelp": {
+    "message": "If nothing appears, check that your system allows notifications from Chrome."
+  },
+  "saved": {
+    "message": "Saved"
+  }
+}

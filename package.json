@@ -1,0 +1,14 @@
+{
+  "name": "dhakkirni",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node tools/check.js",
+    "package": "node tools/package.js"
+  },
+  "devDependencies": {
+    "adhan": "4.4.6"
+  }
+}

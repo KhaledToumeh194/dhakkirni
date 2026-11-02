@@ -1,0 +1,476 @@
+@font-face {
+  font-family: 'Plex Arabic';
+  src: url(fonts/plex-arabic-400.woff2) format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+@font-face {
+  font-family: 'Plex Arabic';
+  src: url(fonts/plex-arabic-600.woff2) format('woff2');
+  font-weight: 600;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+:root {
+  --bg: #0A1220;
+  --surface: #111C30;
+  --surface-raised: #172540;
+  --border: #1F2F4A;
+  --text: #E6EAF0;
+  --text-muted: #93A3BA;
+  --accent: #4FAE95;
+  --accent-hover: #63BBA3;
+  --accent-pressed: #3F9680;
+  --accent-wash: rgba(79, 174, 149, 0.14);
+  --on-accent: #0A1220;
+  --danger: #D9776B;
+
+  /* --border is too faint to outline a form control (1.3:1); this reaches 3:1. */
+  --control-border: color-mix(in srgb, var(--text-muted) 58%, var(--surface));
+
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 24px;
+  --s6: 32px;
+  --radius: 6px;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+html[lang='ar'] {
+  font-size: 16px;
+}
+
+/* Chrome gives extension pages body { font-size: 75% } by default. */
+body {
+  margin: 0;
+  font-family: 'Plex Arabic', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--s5) var(--s4) var(--s6);
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  gap: var(--s2);
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h1 .sep {
+  color: var(--text-muted);
+}
+
+h2 {
+  margin: 0 0 var(--s2);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 0;
+}
+
+section {
+  margin-top: var(--s5);
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+  padding-bottom: var(--s4);
+  border-bottom: 1px solid var(--border);
+}
+
+.help,
+.quiet-text {
+  color: var(--text-muted);
+  font-size: 0.87rem;
+}
+
+.today-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s3);
+}
+
+.times {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin: 0 0 var(--s2);
+  padding: 0;
+  list-style: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.times li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--s3) var(--s1);
+  border-inline-start: 1px solid var(--border);
+  border-bottom: 2px solid transparent;
+}
+
+.times li:first-child {
+  border-inline-start: 0;
+}
+
+.times span {
+  font-size: 0.87rem;
+  color: var(--text-muted);
+}
+
+.times time {
+  font-size: 1.15rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.times .sunrise time {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.times .next {
+  background: var(--accent-wash);
+  border-bottom-color: var(--accent);
+}
+
+.times .next span {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.panel {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s2) var(--s4);
+  margin: 0;
+  padding: var(--s3) var(--s4);
+  border: 0;
+  border-top: 1px solid var(--border);
+}
+
+.panel > .row:first-child,
+.panel > :first-child > .row:first-child {
+  border-top: 0;
+}
+
+.row-text {
+  display: flex;
+  flex: 1 1 260px;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0;
+}
+
+.row-text.check {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--s2);
+}
+
+.row-text.check > span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+legend.row-text {
+  float: inline-start;
+  margin-bottom: var(--s1);
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2) var(--s5);
+  clear: both;
+}
+
+.choices label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  min-height: 32px;
+}
+
+.pair,
+.trio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+}
+
+.pair label,
+.trio label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s1);
+  font-size: 0.87rem;
+  color: var(--text-muted);
+}
+
+.pair.narrow label {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--s2);
+}
+
+.unit-input {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+}
+
+input,
+select,
+button {
+  font: inherit;
+  color: inherit;
+}
+
+input[type='number'],
+input[type='time'],
+select {
+  min-height: 34px;
+  padding: var(--s1) var(--s2);
+  border: 1px solid var(--control-border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+}
+
+input[type='number'] {
+  width: 6.5em;
+}
+
+.pair input[type='number'] {
+  width: 9em;
+}
+
+#interval-custom,
+table input[type='number'],
+.unit-input input[type='number'] {
+  width: 5em;
+}
+
+select {
+  max-width: 100%;
+}
+
+input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+button {
+  min-height: 34px;
+  padding: var(--s1) var(--s4);
+  border: 1px solid var(--control-border);
+  border-radius: var(--radius);
+  background: var(--surface-raised);
+  color: var(--text);
+  cursor: pointer;
+}
+
+button:hover {
+  border-color: var(--text-muted);
+}
+
+button.primary {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
+  font-weight: 600;
+}
+
+button.primary:hover {
+  border-color: var(--accent-hover);
+  background: var(--accent-hover);
+}
+
+button.primary:active {
+  border-color: var(--accent-pressed);
+  background: var(--accent-pressed);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  cursor: pointer;
+}
+
+.switch input {
+  appearance: none;
+  position: relative;
+  width: 36px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid var(--control-border);
+  border-radius: 10px;
+  background: var(--bg);
+  cursor: pointer;
+}
+
+.switch input::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  inset-inline-start: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  transition: inset-inline-start 150ms ease;
+}
+
+.switch input:checked {
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.switch input:checked::after {
+  inset-inline-start: 18px;
+  background: var(--on-accent);
+}
+
+.prayers {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prayers th,
+.prayers td {
+  padding: var(--s2) var(--s4);
+  text-align: start;
+}
+
+.prayers thead th {
+  font-size: 0.87rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.prayers tbody th {
+  font-weight: 600;
+}
+
+.prayers tbody tr {
+  border-top: 1px solid var(--border);
+}
+
+.prayers + .row {
+  border-top: 1px solid var(--border);
+}
+
+.row.error {
+  border-inline-start: 3px solid var(--danger);
+  background: var(--surface-raised);
+  color: var(--danger);
+  font-size: 0.87rem;
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s2) var(--s4);
+  margin-top: var(--s6);
+  padding-top: var(--s4);
+  border-top: 1px solid var(--border);
+}
+
+.bottom .help {
+  flex: 1 1 240px;
+}
+
+.status {
+  min-height: 1.5em;
+  color: var(--text-muted);
+  font-size: 0.87rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 560px) {
+  .times {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .times li:nth-child(4) {
+    border-inline-start: 0;
+  }
+
+  .times li:nth-child(n + 4) {
+    border-top: 1px solid var(--border);
+  }
+
+  .prayers th,
+  .prayers td {
+    padding-inline: var(--s3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .switch input::after {
+    transition: none;
+  }
+}

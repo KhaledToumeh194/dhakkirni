@@ -1,0 +1,291 @@
+{
+  "extName": {
+    "message": "ذكّرني – أذكار ومواقيت الصلاة"
+  },
+  "extShortName": {
+    "message": "ذكّرني"
+  },
+  "extDescription": {
+    "message": "تذكير صامت بالاستغفار والذكر والصلاة على النبي ﷺ أثناء العمل، وتنبيه عند دخول وقت كل صلاة."
+  },
+  "actionTitle": {
+    "message": "إعدادات ذكّرني"
+  },
+  "prayerFajr": {
+    "message": "الفجر"
+  },
+  "prayerSunrise": {
+    "message": "الشروق"
+  },
+  "prayerDhuhr": {
+    "message": "الظهر"
+  },
+  "prayerAsr": {
+    "message": "العصر"
+  },
+  "prayerMaghrib": {
+    "message": "المغرب"
+  },
+  "prayerIsha": {
+    "message": "العشاء"
+  },
+  "prayerNow": {
+    "message": "حان وقت صلاة $prayer$",
+    "placeholders": {
+      "prayer": {
+        "content": "$1"
+      }
+    }
+  },
+  "prayerSoon": {
+    "message": "بقي $minutes$ على صلاة $prayer$",
+    "placeholders": {
+      "prayer": {
+        "content": "$1"
+      },
+      "minutes": {
+        "content": "$2"
+      }
+    }
+  },
+  "minutesOne": {
+    "message": "دقيقة واحدة"
+  },
+  "minutesTwo": {
+    "message": "دقيقتان"
+  },
+  "minutesFew": {
+    "message": "$count$ دقائق",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "minutesMany": {
+    "message": "$count$ دقيقة",
+    "placeholders": {
+      "count": {
+        "content": "$1"
+      }
+    }
+  },
+  "categoryIstighfar": {
+    "message": "استغفار"
+  },
+  "categoryTasbih": {
+    "message": "ذكر"
+  },
+  "categorySalawat": {
+    "message": "الصلاة على النبي ﷺ"
+  },
+  "optionsTitle": {
+    "message": "إعدادات ذكّرني"
+  },
+  "enabledLabel": {
+    "message": "التذكيرات"
+  },
+  "todayHeading": {
+    "message": "اليوم"
+  },
+  "nextLabel": {
+    "message": "التالية"
+  },
+  "sourceCalc": {
+    "message": "محسوبة: $method$",
+    "placeholders": {
+      "method": {
+        "content": "$1"
+      }
+    }
+  },
+  "noLocation": {
+    "message": "حدّد موقعك في الأسفل لعرض مواقيت اليوم."
+  },
+  "locationHeading": {
+    "message": "الموقع"
+  },
+  "useMyLocation": {
+    "message": "استخدم موقعي"
+  },
+  "latitude": {
+    "message": "خط العرض"
+  },
+  "longitude": {
+    "message": "خط الطول"
+  },
+  "saveLocation": {
+    "message": "حفظ"
+  },
+  "locationHelp": {
+    "message": "يُستخدم لحساب المواقيت فقط، ولا يغادر هذا الجهاز."
+  },
+  "locationDenied": {
+    "message": "رُفض الوصول إلى الموقع. أدخل الإحداثيات يدويًا."
+  },
+  "locationInvalid": {
+    "message": "يجب أن يكون خط العرض بين ‎-90 و90، وخط الطول بين ‎-180 و180."
+  },
+  "calcHeading": {
+    "message": "طريقة الحساب"
+  },
+  "method": {
+    "message": "الطريقة"
+  },
+  "methodMuslimWorldLeague": {
+    "message": "رابطة العالم الإسلامي"
+  },
+  "methodUmmAlQura": {
+    "message": "أم القرى، مكة المكرمة"
+  },
+  "methodEgyptian": {
+    "message": "الهيئة المصرية العامة للمساحة"
+  },
+  "methodKarachi": {
+    "message": "جامعة العلوم الإسلامية، كراتشي"
+  },
+  "methodNorthAmerica": {
+    "message": "الجمعية الإسلامية لأمريكا الشمالية"
+  },
+  "methodMoonsightingCommittee": {
+    "message": "لجنة رؤية الهلال"
+  },
+  "methodDubai": {
+    "message": "دبي"
+  },
+  "methodQatar": {
+    "message": "قطر"
+  },
+  "methodKuwait": {
+    "message": "الكويت"
+  },
+  "methodSingapore": {
+    "message": "سنغافورة"
+  },
+  "methodTurkey": {
+    "message": "رئاسة الشؤون الدينية، تركيا"
+  },
+  "methodTehran": {
+    "message": "معهد الجيوفيزياء، طهران"
+  },
+  "methodCustom": {
+    "message": "زوايا مخصّصة"
+  },
+  "fajrAngle": {
+    "message": "زاوية الفجر"
+  },
+  "ishaAngle": {
+    "message": "زاوية العشاء"
+  },
+  "ishaInterval": {
+    "message": "العشاء بعد المغرب (دقيقة)"
+  },
+  "customHelp": {
+    "message": "استخدم الزوايا التي تعتمدها الجهة الدينية في بلدك. اجعل مدة العشاء ٠ لاستخدام الزاوية."
+  },
+  "madhab": {
+    "message": "العصر"
+  },
+  "madhabShafi": {
+    "message": "الجمهور (الشافعي والمالكي والحنبلي)"
+  },
+  "madhabHanafi": {
+    "message": "الحنفي"
+  },
+  "highLatitude": {
+    "message": "خطوط العرض العليا"
+  },
+  "highLatitudeAuto": {
+    "message": "تلقائي"
+  },
+  "highLatitudeMiddle": {
+    "message": "منتصف الليل"
+  },
+  "highLatitudeSeventh": {
+    "message": "سُبع الليل"
+  },
+  "highLatitudeTwilight": {
+    "message": "زاوية الشفق"
+  },
+  "highLatitudeHelp": {
+    "message": "مهمة فوق خط العرض ٤٨° تقريبًا، مثل بريطانيا والدول الإسكندنافية وكندا، حيث قد يستمر الشفق طوال الليل صيفًا."
+  },
+  "prayersHeading": {
+    "message": "تنبيهات الصلاة"
+  },
+  "colPrayer": {
+    "message": "الصلاة"
+  },
+  "colNotify": {
+    "message": "تنبيه"
+  },
+  "colOffset": {
+    "message": "تعديل (دقيقة)"
+  },
+  "offsetHelp": {
+    "message": "التعديل يقدّم كل وقت محسوب أو يؤخّره بعدد الدقائق المكتوب. استخدمه لتطابق المواقيت جدول مسجدك."
+  },
+  "preMinutes": {
+    "message": "التذكير قبل كل صلاة"
+  },
+  "preMinutesHelp": {
+    "message": "دقائق قبل الصلاة. ٠ يوقفه."
+  },
+  "dhikrHeading": {
+    "message": "تذكير الذكر"
+  },
+  "interval": {
+    "message": "ذكّرني كل"
+  },
+  "intervalCustom": {
+    "message": "مخصّص"
+  },
+  "minutesUnit": {
+    "message": "دقيقة"
+  },
+  "intervalHelp": {
+    "message": "خمس دقائق على الأقل."
+  },
+  "categories": {
+    "message": "يشمل"
+  },
+  "includeIstighfar": {
+    "message": "الاستغفار"
+  },
+  "includeTasbih": {
+    "message": "التسبيح والتحميد والتكبير"
+  },
+  "includeSalawat": {
+    "message": "الصلاة على النبي ﷺ"
+  },
+  "quietHours": {
+    "message": "ساعات الهدوء"
+  },
+  "quietFrom": {
+    "message": "من"
+  },
+  "quietTo": {
+    "message": "إلى"
+  },
+  "quietHelp": {
+    "message": "توقف تذكير الذكر فقط، وتبقى تنبيهات الصلاة."
+  },
+  "languageHeading": {
+    "message": "اللغة"
+  },
+  "languageBoth": {
+    "message": "العربية والإنجليزية"
+  },
+  "languageHelp": {
+    "message": "للتنبيهات ولهذه الصفحة."
+  },
+  "testButton": {
+    "message": "إرسال تنبيه تجريبي"
+  },
+  "testHelp": {
+    "message": "إذا لم يظهر شيء، فتأكد من أن النظام يسمح بإشعارات Chrome."
+  },
+  "saved": {
+    "message": "تم الحفظ"
+  }
+}
